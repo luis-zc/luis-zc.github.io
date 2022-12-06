@@ -1,3 +1,3 @@
-# luis-zc.github.io
+# Personal Website
 
-hello world :)
+currently just trying out some layouts for a portfolio website
