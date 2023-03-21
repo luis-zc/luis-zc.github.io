@@ -5,11 +5,16 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body
 {
+    width: 100%;
     min-width: 100vh;
     overflow-x: hidden;
-    background-color: rgb(212, 190, 163);
+    background-color: #347444;
 }
 
 h1
@@ -21,6 +26,11 @@ h1
     font-family: 'Courier New';font-size: 22px;
     
 }
+
+
+.center {
+    text-align: center;
+  }
 
 .main
 {
