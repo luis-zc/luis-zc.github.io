@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    padding: 20px 20px 20px 0; /* Updated padding */
+    padding: 20px;
     text-align: left;
     width: 100%;
     max-width: 600px;
@@ -52,23 +52,20 @@ main {
 
 .profile-section {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-}
-
-.profile-section .profile-text {
-    flex: 1;
-    text-align: left;
-    margin-right: 20px;
-}
-
-.profile-section .profile-text h1{
-   font-size: 30px;
 }
 
 .profile-section img {
     display: block;
-    max-width: 100px; /* Updated size */
+    margin-right: 20px;
+    max-width: 100px; /* Adjust the size as needed */
     border-radius: 50%;
+}
+
+.profile-section .profile-text {
+    text-align: left;
+    flex-grow: 1;
 }
 
 .text-section {
