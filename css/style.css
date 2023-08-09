@@ -30,18 +30,23 @@ header {
 }
 
 nav ul {
+    display: flex; /* Add this line */
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Spacing between list items */
 }
+
 
 nav ul li {
     display: inline-block;
 }
 
 nav ul li.right {
-    float: right;
+    margin-left: auto; /* Move the button to the right */
 }
+
 
 nav ul li a {
     color: #0C0F11;
@@ -119,4 +124,27 @@ footer {
     color:white !important;
 }
 
+.btn {
+    border: 0px solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #cfd0d1;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.btn:hover, btn:focus, btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.btn i.fa-sun {
+    color: white;
+}
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const nmToggle = document.getElementById("nmToggle");
     const icons = document.querySelectorAll(".footer-right a i");
     const headerLinks = document.querySelectorAll("header a");
@@ -15,8 +15,24 @@
         headerLinks.forEach(link => {
             link.classList.toggle("white-color");
         });
+
+        // Toggle the button icon and background color based on the body class
+        const button = document.getElementById("nmToggle");
+        const buttonIcon = button.querySelector("i");
+        
+        if (document.body.classList.contains("light-mode")) {
+            buttonIcon.classList.remove("fa-moon");
+            buttonIcon.classList.add("fa-sun");
+            button.style.backgroundColor = "#353b40"; // Change to desired color
+        } else {
+            buttonIcon.classList.remove("fa-sun");
+            buttonIcon.classList.add("fa-moon");
+            button.style.backgroundColor = "#cfd0d1"; // Change to desired color
+        }
     });
 });
+
+
 </script>
 
 
@@ -37,7 +53,9 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">Projects</a></li>
                         <!-- <li class="right"><a href="#">Contact</a></li> -->
-                        <li class="right"><button id="nmToggle">Toggle</button></li>
+                        <li class="right">
+                            <button id="nmToggle" class="btn"><i class="fas fa-moon"></i></button>
+                        </li>
 
                     </ul>
                 </nav>
@@ -71,7 +89,7 @@
 
             <footer>
                 <div class="footer-left">
-                    &copy; 2023 Your Name
+                    &copy; 2023 Luis Zettel Cruz
                 </div>
                 <div class="footer-right">
                     <a href="#"><i class="fab fa-twitter" style="color: #0C0F11"></i></a>
