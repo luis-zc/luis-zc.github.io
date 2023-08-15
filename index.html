@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const nmToggle = document.getElementById("nmToggle");
     const icons = document.querySelectorAll(".footer-right a i");
     const headerLinks = document.querySelectorAll("header a");
+    const projectBoxes = document.querySelectorAll(".project-box");
 
     nmToggle.addEventListener("click", function () {
-        document.body.classList.toggle("light-mode");
+        document.body.classList.toggle("dark-mode");
         icons.forEach(icon => {
             icon.classList.toggle("white-color");
         });
@@ -16,18 +17,17 @@ document.addEventListener("DOMContentLoaded", function () {
             link.classList.toggle("white-color");
         });
 
+
         // Toggle the button icon and background color based on the body class
         const button = document.getElementById("nmToggle");
         const buttonIcon = button.querySelector("i");
         
-        if (document.body.classList.contains("light-mode")) {
+        if (document.body.classList.contains("dark-mode")) {
             buttonIcon.classList.remove("fa-moon");
             buttonIcon.classList.add("fa-sun");
-            button.style.backgroundColor = "#353b40"; // Change to desired color
         } else {
             buttonIcon.classList.remove("fa-sun");
             buttonIcon.classList.add("fa-moon");
-            button.style.backgroundColor = "#cfd0d1"; // Change to desired color
         }
     });
 });
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             Luis Zettel Cruz
                             <span class="subtext">Computer Science Student</span>
                         </h1>
-                        <p>Hey, I'm Luis. <br> I'm currently pursuing a Bachelor's degree in Computer Science at the Technical University of Munich. I'm curious about various subcategories of the field, driven by my natural interest and an insatiable desire to understand. </p>
+                        <p>Hey, I'm Luis. <br> I'm currently pursuing a Bachelor's degree in Computer Science at the Technical University of Munich. I'm curious about various subcategories of the field, driven by my natural interest and an insatiable desire to understand the digital World we live in. </p>
                     </div>                    
                     <img src="images/image3.jpg" alt="Profile Image">
                 </section>

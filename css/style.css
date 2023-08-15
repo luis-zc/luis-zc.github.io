@@ -1,32 +1,51 @@
+
+/* Variables */
+:root {
+    /* scale Variables */
+    --max-width: 47.5rem;
+
+    /* color Variables */
+    --background: white;
+    --text-color: #0C0F11;
+    --border-color: #ccc;
+    --name-color: #333;
+    --btn-color: #cfd0d1;
+
+}
+
+body.dark-mode {
+    --background: #0C0F11;
+    --text-color: white;
+    --border-color: #ccc;
+    --border-color-hover: #999;
+    --btn-color: #353b40;
+}
+
+
 body {
-    background-color: white;
-    color: #0C0F11;
+    background-color: var(--background);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 
-/* Night Mode Styles */
-body.light-mode {
-    color: white;
-    background-color: #0C0F11;
-}
 
 /* Add styling for the subtext */
 .subtext {
     font-size: 13px; /* Adjust the font size as needed */
     font-weight: normal; /* Or use 'font-style: italic;' for italic styling */
-    color: #666; /* Customize the color */
+    color: var(--border-color); 
     display: block; /* Make the subtext span a block element */
     margin-bottom: 5px; /* Add some spacing between the subtext and the name */
 }
 
 /* Style for the name */
 .name {
-    font-size: 24px; /* Adjust the font size as needed */
-    font-weight: bold; /* Customize the font weight */
-    color: #333; /* Customize the color */
+    font-size: 24px; 
+    font-weight: bold; 
+    color: var(--name-color); 
 }
 
 
@@ -43,7 +62,7 @@ header {
     padding: 20px 20px 20px 0; /* Updated padding */
     text-align: left;
     width: 100%;
-    max-width: 47.5rem;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -76,7 +95,7 @@ main {
     padding: 20px;
     text-align: center;
     width: 100%;
-    max-width: 47.5rem;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -112,7 +131,7 @@ main {
 .about-link {
     display: inline-block;
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     text-decoration: none; /* Remove default underline */
     color: inherit; /* Inherit text color */
@@ -120,7 +139,7 @@ main {
 }
 
 .about-link:hover {
-    border-color: #999; /* Border color on hover */
+    border-color: var(--border-color-hover); /* Border color on hover */
 }
 
 
@@ -146,15 +165,16 @@ main {
 .project-box {
     width: 13rem;
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid var(--border-color);
+    color: var(--text-color-light);
     border-radius: 10px;
     text-align: left;
-    background-color: #f8f8f8;
-    transition: border-color 0.3s;
+    background-color: var(--background-light);
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
 .project-box:hover {
-    border-color: #999;
+    border-color: var(--border-color-hover);
 }
 
 .project-box h3 {
@@ -172,7 +192,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: var(--max-width);
     margin-top: auto;
 }
 
@@ -204,17 +224,15 @@ footer {
     width: 30px;
     height: 30px;
     border-radius: 5px;
-    background-color: #cfd0d1;
+    background-color: var(--btn-color);
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    -webkit-transition-property: box-shadow, transform;
-    transition-property: box-shadow, transform;
+    -webkit-transition-property: transform;
+    transition-property: transform;
 }
 
 .btn:hover, btn:focus, btn:active{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
