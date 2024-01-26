@@ -1,0 +1,42 @@
+.project-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-box {
+    width: 13rem;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    color: var(--text-color-light);
+    border-radius: 10px;
+    text-align: left;
+    background-color: var(--background-light);
+    transition: border-color 0.3s, background-color 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.project-box:hover, .project-box:focus, .project-box:active{
+    border-color: var(--border-color-hover);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.project-box h3 {
+    margin-top: 0;
+}
+
+.project-box p {
+    margin-bottom: 0;
+}

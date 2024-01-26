@@ -1,3 +1,6 @@
+@import url('profile-section.css');
+@import url('profile-projects.css');
+@import url('footer.css');
 
 /* Variables */
 :root {
@@ -10,6 +13,7 @@
     --border-color: #ccc;
     --name-color: #333;
     --btn-color: #cfd0d1;
+    --secondary-txt-color: #7b7b7b;
 
 }
 
@@ -19,6 +23,7 @@ body.dark-mode {
     --border-color: #ccc;
     --border-color-hover: #999;
     --btn-color: #353b40;
+    --secondary-txt-color: #d5d5d5;
 }
 
 
@@ -36,7 +41,7 @@ body {
 .subtext {
     font-size: 13px; /* Adjust the font size as needed */
     font-weight: normal; /* Or use 'font-style: italic;' for italic styling */
-    color: var(--border-color); 
+    color: var(--secondary-txt-color); 
     display: block; /* Make the subtext span a block element */
     margin-bottom: 5px; /* Add some spacing between the subtext and the name */
 }
@@ -47,8 +52,6 @@ body {
     font-weight: bold; 
     color: var(--name-color); 
 }
-
-
 
 .container {
     display: flex;
@@ -99,47 +102,10 @@ main {
     margin: 0 auto;
 }
 
-.profile-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.profile-section .profile-text {
-    flex: 1;
-    text-align: left;
-    margin-right: 20px;
-}
-
-.profile-section .profile-text h1{
-   font-size: 30px;
-}
-
-.profile-section img {
-    display: block;
-    max-width: 100px; /* Updated size */
-    border-radius: 50%;
-}
-
 
 .text-section {
     margin-bottom: 20px;
     text-align: left;
-}
-
-
-.about-link {
-    display: inline-block;
-    padding: 10px;
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    text-decoration: none; /* Remove default underline */
-    color: inherit; /* Inherit text color */
-    margin-bottom: 20px;
-}
-
-.about-link:hover {
-    border-color: var(--border-color-hover); /* Border color on hover */
 }
 
 
@@ -148,77 +114,11 @@ main {
     margin-bottom: 10px;
 }
 
-.project-boxes {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    margin-top: 20px
-}
-
-.project-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.project-box {
-    width: 13rem;
-    padding: 10px;
-    border: 2px solid var(--border-color);
-    color: var(--text-color-light);
-    border-radius: 10px;
-    text-align: left;
-    background-color: var(--background-light);
-    transition: border-color 0.3s, background-color 0.3s;
-}
-
-.project-box:hover {
-    border-color: var(--border-color-hover);
-}
-
-.project-box h3 {
-    margin-top: 0;
-}
-
-.project-box p {
-    margin-bottom: 0;
-}
-
-
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: var(--max-width);
-    margin-top: auto;
-}
-
-.footer-left {
-    font-size: 14px;
-}
-
-.footer-right {
-    display: flex;
-    align-items: center;
-}
-
-.footer-right a {
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-.footer-right a:hover {
-    opacity: 0.8;
-}
-
 .white-color {
     color:white !important;
 }
 
+/* nightmode switch button */
 .btn {
     border: 0px solid black;
     width: 30px;
@@ -236,7 +136,7 @@ footer {
     display: block;
     text-align: center;
     margin-bottom: 10px;
-    color: #0C0F11;
+    color: var(--secondary-txt-color); 
     text-decoration: none;
     font-style: italic;
     transition: opacity 0.3s;
@@ -246,7 +146,7 @@ footer {
     opacity: 0.8;
 }
 
-
+/* Little grow animation when hovering */
 .btn:hover, btn:focus, btn:active{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);

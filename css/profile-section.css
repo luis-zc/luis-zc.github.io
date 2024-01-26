@@ -1,0 +1,36 @@
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-section .profile-text {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.profile-section .profile-text h1{
+   font-size: 30px;
+}
+
+.profile-section img {
+    display: block;
+    max-width: 100px; /* Updated size */
+    border-radius: 50%;
+}
+
+
+.about-link {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit text color */
+    margin-bottom: 20px;
+}
+
+.about-link:hover {
+    border-color: var(--border-color-hover); /* Border color on hover */
+}

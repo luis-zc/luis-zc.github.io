@@ -1,0 +1,27 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-top: auto;
+}
+
+.footer-left {
+    font-size: 14px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.footer-right a:hover {
+    opacity: 0.8;
+}

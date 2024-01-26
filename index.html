@@ -1,41 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const nmToggle = document.getElementById("nmToggle");
-    const icons = document.querySelectorAll(".footer-right a i");
-    const headerLinks = document.querySelectorAll("header a");
-    const projectBoxes = document.querySelectorAll(".project-box");
-
-    nmToggle.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-        icons.forEach(icon => {
-            icon.classList.toggle("white-color");
-        });
-        headerLinks.forEach(link => {
-            link.classList.toggle("white-color");
-        });
-
-
-        // Toggle the button icon and background color based on the body class
-        const button = document.getElementById("nmToggle");
-        const buttonIcon = button.querySelector("i");
-        
-        if (document.body.classList.contains("dark-mode")) {
-            buttonIcon.classList.remove("fa-moon");
-            buttonIcon.classList.add("fa-sun");
-        } else {
-            buttonIcon.classList.remove("fa-sun");
-            buttonIcon.classList.add("fa-moon");
-        }
-    });
-});
-
-
-</script>
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <section class="text-section">
                     <h2>Projects</h2>
                     <div class="project-boxes">
-                        <a href="#" class="project-link">
+                        <a href="project1.html" class="project-link">
                             <div class="project-box">
                                 <h3>Project 1</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -124,5 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
             </footer>
         </div>
     </div>
+    <script src="nightmode_toggle.js"></script>
 </body>
 </html>
